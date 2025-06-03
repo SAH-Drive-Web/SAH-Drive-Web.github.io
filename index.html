@@ -191,19 +191,44 @@
   <section class="hero is-small">
     <div class="hero-body">
       <div class="container">
+        <!-- Row: two videos in one line -->
         <h2 class="title is-3 has-text-centered">Demo Video</h2>
-        <div class="video-container" style="max-width: 480px; margin: 0 auto;">
-          <video poster="" id="demo-video" autoplay controls muted loop
-            style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);">
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+        <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-bottom: 2rem;">
+
+          <!-- First Video -->
+          <div class="column has-text-centered" style="max-width: 560px;">
+            <h3 class="title is-5 mb-3">SAH-Drive</h3>
+            <video autoplay muted loop controls
+              style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+              <source src="static/videos/carousel1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <!-- Second Video -->
+          <div class="column has-text-centered" style="max-width: 560px;">
+            <h3 class="title is-5 mb-3">PDM-Closed</h3>
+            <video autoplay muted loop controls
+              style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+              <source src="static/videos/carousel2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
         </div>
-        <p class="subtitle is-5 mb-5" style="max-width: 800px; margin: 0 auto; padding: 0 1rem;">
-          This video demonstrates the autonomous driving trajectory planning process of SAH-Drive, featuring two
-          overtaking scenarios, one accident scenario, and one construction zone scenario within <em>interPlan</em>.
-        </p>
+
+        <!-- Separate row: description text centered -->
+        <div class="has-text-centered">
+          <p class="subtitle is-5 mb-5" style="max-width: 800px; margin: 0 auto; padding: 0 1rem;">
+            This video demonstrates the autonomous driving trajectory planning process of SAH-Drive and
+            PDM-Closed,featuring two
+            overtaking scenarios, one accident scenario, and one construction zone scenario within <em>interPlan</em>.
+            SAH-Drive successfully plans trajectories in various long-tail scenarios, whereas PDM-Closed fails to plan
+            due to its inability to perform lane changes.
+          </p>
+        </div>
       </div>
+    </div>
     </div>
   </section>
 
